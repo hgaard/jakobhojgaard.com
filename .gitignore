@@ -1,0 +1,298 @@
+# jakobhojgaard.com - Git Ignore File
+# Personal website/portfolio project
+
+# ============================================================================
+# Operating System Files
+# ============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ============================================================================
+# IDEs and Editors
+# ============================================================================
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains IDEs (WebStorm, IntelliJ, etc.)
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ============================================================================
+# Node.js / JavaScript / TypeScript
+# ============================================================================
+
+# Dependencies
+node_modules/
+jspm_packages/
+bower_components/
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+.vite/
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
+
+# Package manager files
+.npm
+.yarn/
+.pnp.*
+.yarn-integrity
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# ============================================================================
+# Python
+# ============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# Distribution / packaging
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+wheels/
+
+# ============================================================================
+# Ruby
+# ============================================================================
+
+# Bundler
+vendor/bundle/
+.bundle/
+
+# Jekyll (if used for static site)
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# ============================================================================
+# Static Site Generators
+# ============================================================================
+
+# Hugo
+public/
+resources/_gen/
+
+# Gatsby
+.cache/
+public/
+
+# Eleventy
+_site/
+
+# Astro
+.astro/
+
+# ============================================================================
+# Environment & Secrets
+# ============================================================================
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+
+# API keys and secrets
+secrets/
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Configuration with sensitive data
+config.local.*
+*-private.json
+
+# ============================================================================
+# Build Tools & Bundlers
+# ============================================================================
+
+# Webpack
+.webpack/
+
+# Rollup
+.rollup.cache/
+
+# Turbo
+.turbo/
+
+# ============================================================================
+# Testing
+# ============================================================================
+
+# Coverage reports
+coverage/
+*.lcov
+.nyc_output/
+htmlcov/
+.coverage
+.coverage.*
+
+# Test artifacts
+test-results/
+playwright-report/
+.playwright/
+
+# ============================================================================
+# Deployment
+# ============================================================================
+
+# Vercel
+.vercel
+
+# Netlify
+.netlify/
+
+# AWS
+.aws-sam/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# ============================================================================
+# Temporary Files
+# ============================================================================
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~.nib
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Lock files (optional - uncomment if you want to ignore them)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# ============================================================================
+# Media & Assets (large files)
+# ============================================================================
+
+# Uncomment if you want to ignore large media files
+# *.mp4
+# *.mov
+# *.avi
+# *.mkv
+# *.psd
+# *.ai
+
+# ============================================================================
+# Project-Specific
+# ============================================================================
+
+# Add project-specific ignores below
+# Example: backups/, drafts/, notes/
