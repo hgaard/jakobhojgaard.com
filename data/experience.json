@@ -1,57 +1,247 @@
 [
   {
-    "role": "Technology Advisor & Consultant",
-    "organization": "Independent",
-    "location": "Remote",
-    "startDate": "Jan 2023",
+    "role": "Chief Information Officer (CIO)",
+    "organization": "LMG",
+    "location": "Denmark",
+    "startDate": "2020",
     "endDate": null,
     "current": true,
     "responsibilities": [
-      "Advise organizations on technology strategy and architecture decisions",
-      "Design and review software architecture for scalability and maintainability",
-      "Mentor engineering teams on best practices and effective development workflows",
-      "Evaluate and recommend technology stacks aligned with business objectives"
+      "Improve platform Net Promoter Score to +50 through strategic technology initiatives",
+      "Integrate cloud engineering and security operations for enhanced platform reliability",
+      "Lead organizational efforts to achieve ISO 27001 and SOC2 Type 2 certifications",
+      "Oversee technology strategy and infrastructure management across the organization"
     ],
     "achievements": [
-      "Helped multiple clients establish sustainable architecture practices",
-      "Reduced technical debt and improved system maintainability across client projects",
-      "Mentored engineering teams to improve code quality and delivery velocity"
+      "Successfully obtained ISO 27001 and SOC2 Type 2 certifications",
+      "Improved platform NPS to +50",
+      "Integrated cloud engineering with security operations"
     ],
     "skills": [
-      "Software Architecture",
       "Technology Strategy",
-      "Team Leadership",
       "Cloud Infrastructure",
-      "DevOps",
-      "Agile Methodologies"
+      "Information Security",
+      "Compliance",
+      "Platform Management",
+      "Team Leadership"
     ]
   },
   {
-    "role": "Senior Software Engineer",
-    "organization": "Previous Company",
-    "location": "Copenhagen, Denmark",
-    "startDate": "Mar 2020",
-    "endDate": "Dec 2022",
+    "role": "Chief Technology Officer (CTO)",
+    "organization": "LMG",
+    "location": "Denmark",
+    "startDate": "2020",
+    "endDate": "2023",
     "current": false,
     "responsibilities": [
-      "Led development of core platform features and microservices architecture",
-      "Designed and implemented scalable backend systems serving millions of users",
-      "Collaborated with product and design teams on feature planning and execution",
-      "Established code review practices and engineering standards"
+      "Modernize infrastructure to support 5x platform scaling",
+      "Manage acquisition integration and technology consolidation",
+      "Oversee 120+ person team across engineering, product, QA, and support",
+      "Drive technical strategy and architecture decisions"
     ],
     "achievements": [
-      "Reduced system latency by 60% through architecture optimization",
-      "Implemented CI/CD pipeline that decreased deployment time by 75%",
-      "Mentored 3 junior developers who advanced to mid-level positions"
+      "Successfully scaled infrastructure to support 5x growth",
+      "Led successful acquisition integration",
+      "Built and managed cross-functional team of 120+ professionals"
     ],
     "skills": [
-      "Go",
-      "Kubernetes",
-      "Microservices",
-      "PostgreSQL",
-      "Redis",
-      "Docker",
-      "CI/CD"
+      "Engineering Leadership",
+      "Infrastructure Scaling",
+      "M&A Integration",
+      "Product Management",
+      "Team Building",
+      "Technical Strategy"
+    ]
+  },
+  {
+    "role": "Managing Director",
+    "organization": "KMD Australia",
+    "location": "Australia",
+    "startDate": "2018",
+    "endDate": "2020",
+    "current": false,
+    "responsibilities": [
+      "Establish Australian entity and operations from the ground up",
+      "Build and manage team of 8 developers and architects",
+      "Develop local market strategy and client relationships",
+      "Oversee delivery of enterprise solutions for Australian market"
+    ],
+    "achievements": [
+      "Successfully established KMD's Australian presence",
+      "Built high-performing team of 8 technical professionals",
+      "Delivered enterprise solutions for Australian clients"
+    ],
+    "skills": [
+      "Business Development",
+      "Team Building",
+      "International Operations",
+      "Client Management",
+      "Strategic Planning"
+    ]
+  },
+  {
+    "role": "Technology Director",
+    "organization": "KMD Australia",
+    "location": "Denmark/Global",
+    "startDate": "2018",
+    "endDate": "2020",
+    "current": false,
+    "responsibilities": [
+      "Lead global R&D division with 40-person team across multiple countries",
+      "Drive development of next-generation public data management platform",
+      "Coordinate international teams and establish development processes",
+      "Define technical vision and architecture for enterprise platforms"
+    ],
+    "achievements": [
+      "Built and led 40-person global R&D team",
+      "Developed next-generation public data management platform",
+      "Established successful international collaboration processes"
+    ],
+    "skills": [
+      "R&D Leadership",
+      "Global Team Management",
+      "Platform Architecture",
+      "Public Sector Technology",
+      "Distributed Teams"
+    ]
+  },
+  {
+    "role": "Senior Consultant",
+    "organization": "Readify",
+    "location": "Australia",
+    "startDate": "2016",
+    "endDate": "2018",
+    "current": false,
+    "responsibilities": [
+      "Deliver technical solutions for enterprise and government clients",
+      "Lead project teams ranging from individual contributions to 10+ developers",
+      "Design mobile application architectures using Xamarin, Cordova, and Ionic",
+      "Implement authentication solutions with OAuth2, OpenID Connect, and SAML",
+      "Deploy and manage cloud infrastructure on Azure and AWS"
+    ],
+    "achievements": [
+      "Successfully delivered diverse projects for enterprise and government clients",
+      "Led teams of 10+ developers on complex initiatives",
+      "Implemented secure authentication solutions across multiple platforms"
+    ],
+    "skills": [
+      "Mobile Architecture",
+      "Xamarin",
+      "Cordova",
+      "Ionic",
+      "OAuth2",
+      "OpenID Connect",
+      "SAML",
+      "Azure",
+      "AWS",
+      "Technical Consulting"
+    ]
+  },
+  {
+    "role": "Software Engineer & Architect",
+    "organization": "Schultz A/S",
+    "location": "Denmark",
+    "startDate": "2013",
+    "endDate": "2016",
+    "current": false,
+    "responsibilities": [
+      "Manage team of 5 developers across multiple projects",
+      "Serve as product owner and architect for enterprise solutions",
+      "Design and develop Fasit case management system for public job centers",
+      "Architect Byg og Miljø building permit system",
+      "Develop mobile applications using Xamarin framework"
+    ],
+    "achievements": [
+      "Successfully delivered Fasit case management platform for public sector",
+      "Built Byg og Miljø building permit system",
+      "Led team of 5 developers while maintaining dual architect and product owner roles"
+    ],
+    "skills": [
+      "Software Architecture",
+      "Team Management",
+      "Product Ownership",
+      "Public Sector Solutions",
+      "Xamarin",
+      "Mobile Development",
+      ".NET"
+    ]
+  },
+  {
+    "role": "Advanced Developer",
+    "organization": "NNIT A/S",
+    "location": "Denmark",
+    "startDate": "2011",
+    "endDate": "2013",
+    "current": false,
+    "responsibilities": [
+      "Develop and maintain Nemlog-in, Denmark's government single sign-on solution",
+      "Implement secure authentication mechanisms for government services",
+      "Ensure high availability and security for national infrastructure",
+      "Collaborate with government agencies on identity management"
+    ],
+    "achievements": [
+      "Contributed to Denmark's national identity infrastructure",
+      "Delivered secure authentication solution for government services"
+    ],
+    "skills": [
+      "Identity Management",
+      "Single Sign-On",
+      "Security",
+      "Government IT",
+      ".NET",
+      "Enterprise Development"
+    ]
+  },
+  {
+    "role": "Lead Developer",
+    "organization": "Oticon A/S",
+    "location": "Denmark",
+    "startDate": "2005",
+    "endDate": "2011",
+    "current": false,
+    "responsibilities": [
+      "Design core components for hearing instrument fitting application",
+      "Develop communication protocols for medical devices",
+      "Implement data modeling and performance optimization solutions",
+      "Lead technical initiatives for healthcare technology products"
+    ],
+    "achievements": [
+      "Delivered core component design for hearing instrument fitting application",
+      "Optimized performance for medical device communication",
+      "Developed robust data models for healthcare applications"
+    ],
+    "skills": [
+      "Medical Device Software",
+      "Communication Protocols",
+      "Data Modeling",
+      "Performance Optimization",
+      ".NET",
+      "Healthcare IT"
+    ]
+  },
+  {
+    "role": "Software Developer",
+    "organization": "GN Otometrics A/S",
+    "location": "Denmark",
+    "startDate": "2003",
+    "endDate": "2005",
+    "current": false,
+    "responsibilities": [
+      "Develop Auditbase office management system for healthcare practices",
+      "Implement HL7 healthcare integration standards",
+      "Build practice management features for audiology clinics",
+      "Ensure compliance with healthcare data standards"
+    ],
+    "achievements": [
+      "Successfully delivered Auditbase office management system",
+      "Implemented HL7 healthcare integration"
+    ],
+    "skills": [
+      "Healthcare IT",
+      "HL7 Integration",
+      "Practice Management Software",
+      ".NET",
+      "Database Development"
     ]
   }
 ]
