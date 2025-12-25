@@ -1,0 +1,182 @@
+{{ define "main" }}
+<section class="experience-page">
+  <header>
+    <h1>{{ .Title }}</h1>
+    {{ if .Content }}
+    <div class="section-intro">
+      {{ .Content }}
+    </div>
+    {{ end }}
+  </header>
+
+  {{ $experiences := .Site.Data.experience }}
+  {{ if $experiences }}
+  <div class="experience-list">
+    {{ range $experiences }}
+    <article class="experience-entry">
+      <header>
+        <h2>{{ .role }}</h2>
+        <p class="experience-org">{{ .organization }}</p>
+        <p class="experience-period">
+          {{ if .current }}
+            {{ .startDate }} - Present
+          {{ else }}
+            {{ .startDate }} - {{ .endDate }}
+          {{ end }}
+          {{ if .location }}
+          <span class="location">{{ .location }}</span>
+          {{ end }}
+        </p>
+      </header>
+
+      {{ if .responsibilities }}
+      <div class="responsibilities">
+        <h3>Key Responsibilities</h3>
+        <ul>
+          {{ range .responsibilities }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+
+      {{ if .achievements }}
+      <div class="achievements">
+        <h3>Notable Achievements</h3>
+        <ul>
+          {{ range .achievements }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+
+      {{ if .skills }}
+      <div class="skills">
+        <strong>Skills:</strong>
+        {{ range $index, $skill := .skills }}
+          {{ if $index }}, {{ end }}{{ $skill }}
+        {{ end }}
+      </div>
+      {{ end }}
+    </article>
+    {{ end }}
+  </div>
+  {{ else }}
+  <p class="empty-state">Experience information coming soon.</p>
+  {{ end }}
+</section>
+
+<style>
+.experience-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.experience-page header h1 {
+  margin-top: 0;
+}
+
+.section-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  color: #555;
+}
+
+.experience-list {
+  margin-top: 3rem;
+}
+
+.experience-entry {
+  margin-bottom: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.experience-entry:last-child {
+  border-bottom: none;
+}
+
+.experience-entry header h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.experience-org {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0066cc;
+  margin-bottom: 0.5rem;
+}
+
+.experience-period {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.location {
+  margin-left: 1rem;
+}
+
+.location::before {
+  content: "• ";
+  margin-right: 0.5rem;
+}
+
+.responsibilities,
+.achievements {
+  margin-bottom: 1.5rem;
+}
+
+.responsibilities h3,
+.achievements h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #555;
+}
+
+.responsibilities ul,
+.achievements ul {
+  margin-left: 1.5rem;
+  margin-bottom: 0;
+}
+
+.responsibilities li,
+.achievements li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.skills {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.skills strong {
+  color: #333;
+}
+
+.empty-state {
+  text-align: center;
+  color: #888;
+  font-size: 1.1rem;
+  padding: 3rem 1rem;
+}
+
+@media (max-width: 767px) {
+  .experience-entry {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  .section-intro {
+    margin-bottom: 2rem;
+  }
+}
+</style>
+{{ end }}

@@ -1,0 +1,12 @@
+baseURL = 'https://jakobhojgaard.com/'
+languageCode = 'en-us'
+title = 'Jakob Højgaard'
+
+[params]
+  description = "Personal website and professional portfolio"
+  author = "Jakob Højgaard"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -1,0 +1,11 @@
+<header role="banner">
+  <nav role="navigation" aria-label="Main navigation">
+    <a href="/" class="site-title">{{ .Site.Title }}</a>
+    <ul class="nav-menu">
+      <li><a href="/" aria-current="{{ if .IsHome }}page{{ end }}">Introduction</a></li>
+      <li><a href="/experience/" aria-current="{{ if eq .Section "experience" }}page{{ end }}">Experience</a></li>
+      <li><a href="/articles/" aria-current="{{ if eq .Section "articles" }}page{{ end }}">Articles</a></li>
+      <li><a href="/contact/" aria-current="{{ if eq .Section "contact" }}page{{ end }}">Contact</a></li>
+    </ul>
+  </nav>
+</header>

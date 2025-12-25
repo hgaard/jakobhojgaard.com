@@ -1,0 +1,125 @@
+{{ define "main" }}
+<article>
+  <header>
+    <h1>{{ .Title }}</h1>
+    {{ if .Params.date }}
+    <p class="article-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      {{ if .Params.readingTime }}
+      <span class="reading-time">{{ .Params.readingTime }} min read</span>
+      {{ end }}
+    </p>
+    {{ end }}
+  </header>
+
+  <div class="article-content">
+    {{ .Content }}
+  </div>
+
+  {{ if .Params.tags }}
+  <footer class="article-tags">
+    <strong>Tags:</strong>
+    {{ range .Params.tags }}
+    <span class="tag">{{ . }}</span>
+    {{ end }}
+  </footer>
+  {{ end }}
+</article>
+
+<style>
+article {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+article header h1 {
+  margin-top: 0;
+  font-size: 2.5rem;
+}
+
+.article-meta {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.reading-time {
+  margin-left: 1rem;
+}
+
+.reading-time::before {
+  content: "• ";
+  margin-right: 0.5rem;
+}
+
+.article-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.article-content h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.article-content h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.article-content ul, .article-content ol {
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.article-content li {
+  margin-bottom: 0.5rem;
+}
+
+.article-content code {
+  background: #f4f4f4;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.article-content pre {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.article-content pre code {
+  background: none;
+  padding: 0;
+}
+
+.article-tags {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.tag {
+  display: inline-block;
+  background: #f0f0f0;
+  padding: 0.25rem 0.75rem;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 3px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 767px) {
+  article header h1 {
+    font-size: 2rem;
+  }
+
+  .article-content {
+    font-size: 1rem;
+  }
+}
+</style>
+{{ end }}

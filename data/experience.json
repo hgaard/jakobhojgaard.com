@@ -1,0 +1,57 @@
+[
+  {
+    "role": "Technology Advisor & Consultant",
+    "organization": "Independent",
+    "location": "Remote",
+    "startDate": "Jan 2023",
+    "endDate": null,
+    "current": true,
+    "responsibilities": [
+      "Advise organizations on technology strategy and architecture decisions",
+      "Design and review software architecture for scalability and maintainability",
+      "Mentor engineering teams on best practices and effective development workflows",
+      "Evaluate and recommend technology stacks aligned with business objectives"
+    ],
+    "achievements": [
+      "Helped multiple clients establish sustainable architecture practices",
+      "Reduced technical debt and improved system maintainability across client projects",
+      "Mentored engineering teams to improve code quality and delivery velocity"
+    ],
+    "skills": [
+      "Software Architecture",
+      "Technology Strategy",
+      "Team Leadership",
+      "Cloud Infrastructure",
+      "DevOps",
+      "Agile Methodologies"
+    ]
+  },
+  {
+    "role": "Senior Software Engineer",
+    "organization": "Previous Company",
+    "location": "Copenhagen, Denmark",
+    "startDate": "Mar 2020",
+    "endDate": "Dec 2022",
+    "current": false,
+    "responsibilities": [
+      "Led development of core platform features and microservices architecture",
+      "Designed and implemented scalable backend systems serving millions of users",
+      "Collaborated with product and design teams on feature planning and execution",
+      "Established code review practices and engineering standards"
+    ],
+    "achievements": [
+      "Reduced system latency by 60% through architecture optimization",
+      "Implemented CI/CD pipeline that decreased deployment time by 75%",
+      "Mentored 3 junior developers who advanced to mid-level positions"
+    ],
+    "skills": [
+      "Go",
+      "Kubernetes",
+      "Microservices",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "CI/CD"
+    ]
+  }
+]
