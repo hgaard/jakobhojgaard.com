@@ -1,0 +1,50 @@
+{{ define "main" }}
+<section class="introduction">
+  {{ if .Params.tagline }}
+  <p class="tagline">{{ .Params.tagline }}</p>
+  {{ end }}
+
+  <div class="intro-content">
+    {{ .Content }}
+  </div>
+</section>
+
+<style>
+.introduction {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0066cc;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.intro-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.intro-content p {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  .introduction {
+    padding: 1rem 0;
+  }
+
+  .tagline {
+    font-size: 1.25rem;
+  }
+
+  .intro-content {
+    font-size: 1rem;
+  }
+}
+</style>
+{{ end }}

@@ -175,6 +175,7 @@ _site/
 # Hugo
 public/
 resources/_gen/
+.hugo_build.lock
 
 # Gatsby
 .cache/
