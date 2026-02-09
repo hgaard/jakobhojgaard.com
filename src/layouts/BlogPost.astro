@@ -1,0 +1,41 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout title={`${frontmatter.title} — Jakob Højgaard`} description={frontmatter.excerpt}>
+  <article class="animate-fade-in">
+    <a href="/" class="inline-flex items-center gap-1.5 font-body text-sm text-text-muted no-underline pt-10 pb-5 hover:text-accent transition-colors">
+      ← Back to all articles
+    </a>
+
+    <div class="py-5 pb-20 max-w-[640px]">
+      <!-- Meta -->
+      <div class="flex gap-3 items-center mb-5">
+        <span class="font-mono text-[11px] text-accent tracking-wider uppercase font-semibold">{frontmatter.category}</span>
+        <span class="text-border">·</span>
+        <span class="font-mono text-xs text-text-muted">{frontmatter.date}</span>
+        <span class="text-border">·</span>
+        <span class="font-mono text-xs text-text-muted">{frontmatter.readTime} read</span>
+      </div>
+
+      <!-- Title -->
+      <h1 class="font-display text-4xl md:text-[42px] font-semibold text-text-primary tracking-tight leading-[1.15] mb-6">
+        {frontmatter.title}
+      </h1>
+
+      <!-- Excerpt -->
+      <p class="font-body text-lg text-text-secondary leading-relaxed mb-10 italic">
+        {frontmatter.excerpt}
+      </p>
+
+      <div class="w-10 h-0.5 bg-accent mb-10"></div>
+
+      <!-- Content -->
+      <div class="prose">
+        <slot />
+      </div>
+    </div>
+  </article>
+</BaseLayout>

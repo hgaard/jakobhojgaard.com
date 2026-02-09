@@ -1,0 +1,36 @@
+---
+layout: ../../layouts/BlogPost.astro
+title: "From C# to Python: Upskilling an Engineering Team for AI"
+excerpt: "When your entire backend team speaks .NET fluently but the AI ecosystem runs on Python, you face a choice. Here's how we designed a learning path that didn't kill velocity."
+date: "Jan 2026"
+pubDate: "2026-01-20"
+category: "Engineering"
+readTime: "5 min"
+featured: false
+---
+
+When I first proposed that our engineering team needed Python proficiency, the pushback was predictable: "We're a C# shop. Why would we fragment our stack?"
+
+Fair question. The answer is pragmatic, not ideological. The AI/ML ecosystem — from PyTorch to LangChain to the Anthropic and OpenAI SDKs — speaks Python natively. You *can* use these tools from C#, but you're constantly fighting the current: fewer examples, thinner documentation, slower community support.
+
+## The learning path we designed
+
+Rather than sending everyone to a generic Python course, we built a structured path that leveraged what our engineers already knew. Experienced C# developers don't need to learn what a for-loop is — they need to learn where Python's idioms diverge from what they're used to.
+
+We broke it into three phases:
+
+**Phase 1: Syntax and idioms** (2 weeks). List comprehensions, generators, decorators, the GIL, virtual environments. The things that make Python feel like Python rather than "C# without curly braces."
+
+**Phase 2: Data and ML foundations** (4 weeks). Pandas, NumPy, basic scikit-learn. Not to make everyone a data scientist, but to make everyone literate enough to review ML-adjacent code and understand what the models are doing.
+
+**Phase 3: Applied AI engineering** (ongoing). Prompt engineering, RAG architectures, vector databases, API integration patterns. The practical skills needed to ship AI features in production.
+
+## What actually worked
+
+The biggest unlock wasn't the curriculum — it was pairing. We paired C# engineers with the two people on the team who already had Python experience, working on real tasks rather than toy exercises. Nothing accelerates learning like having to ship something by Friday.
+
+The second insight was keeping C# as our primary backend language. Python became a specialist tool for AI workloads, not a replacement. That framing removed the existential threat and let people engage with curiosity rather than anxiety.
+
+## Six months in
+
+We're now at a point where any engineer on the team can stand up a Python service, integrate with an LLM API, and build a basic RAG pipeline. That's a massive capability shift — and it happened without a single engineer leaving or a single sprint being sacrificed to "training."

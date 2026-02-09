@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+::selection {
+  background: #FEF3C7;
+  color: #1A1918;
+}
+
+/* Prose styling for blog posts */
+.prose {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
+  color: #4A4845;
+}
+
+.prose h2 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: #1A1918;
+  letter-spacing: -0.5px;
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+
+.prose h3 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1A1918;
+  margin-top: 36px;
+  margin-bottom: 12px;
+}
+
+.prose p {
+  margin-bottom: 24px;
+}
+
+.prose a {
+  color: #B45309;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+
+.prose a:hover {
+  opacity: 0.7;
+}
+
+.prose code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  background: #FFFFFF;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid #E8E6E1;
+}
+
+.prose pre {
+  background: #1A1918;
+  color: #E8E6E1;
+  padding: 20px 24px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 24px;
+}
+
+.prose pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font-size: 13px;
+}
+
+.prose blockquote {
+  border-left: 3px solid #B45309;
+  padding-left: 20px;
+  margin: 32px 0;
+  font-style: italic;
+  color: #4A4845;
+}
+
+.prose ul, .prose ol {
+  padding-left: 24px;
+  margin-bottom: 24px;
+}
+
+.prose li {
+  margin-bottom: 8px;
+}
+
+.prose img {
+  border-radius: 8px;
+  margin: 32px 0;
+}
+
+.prose hr {
+  border: none;
+  height: 1px;
+  background: #E8E6E1;
+  margin: 48px 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.4s ease;
+}

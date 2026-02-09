@@ -1,0 +1,54 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = "Jakob Højgaard", description = "CIO, builder, writer. Thoughts on fintech, engineering, and leadership." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="bg-bg min-h-screen font-body">
+    <!-- Subtle grain overlay -->
+    <div class="fixed inset-0 pointer-events-none z-0 opacity-[0.025]"
+      style="background-image: url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E&quot;); background-repeat: repeat; background-size: 256px 256px;">
+    </div>
+
+    <div class="max-w-[760px] mx-auto px-6 relative z-10">
+      <!-- Navigation -->
+      <nav class="flex justify-between items-center py-7 border-b border-border">
+        <a href="/" class="flex items-baseline gap-2.5 no-underline">
+          <span class="font-display text-[22px] font-semibold text-text-primary tracking-tight">Jakob Højgaard</span>
+          <span class="font-body text-[13px] text-text-muted tracking-wide uppercase hidden sm:inline">CIO · Builder · Writer</span>
+        </a>
+        <div class="flex gap-8 items-center">
+          <a href="/" class="font-body text-sm text-text-secondary no-underline tracking-wide hover:text-accent transition-colors">Writing</a>
+          <a href="/about" class="font-body text-sm text-text-secondary no-underline tracking-wide hover:text-accent transition-colors">About</a>
+        </div>
+      </nav>
+
+      <!-- Content -->
+      <main>
+        <slot />
+      </main>
+
+      <!-- Footer -->
+      <footer class="border-t border-border py-8 mt-16 flex justify-between items-center">
+        <span class="font-mono text-xs text-text-muted">© 2026 Jakob Højgaard</span>
+        <div class="flex gap-6">
+          <a href="https://linkedin.com/in/yourprofile" class="font-mono text-xs text-text-muted no-underline hover:text-accent transition-colors">LinkedIn</a>
+          <a href="https://github.com/yourprofile" class="font-mono text-xs text-text-muted no-underline hover:text-accent transition-colors">GitHub</a>
+          <a href="https://x.com/yourprofile" class="font-mono text-xs text-text-muted no-underline hover:text-accent transition-colors">X</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,124 +1,99 @@
-# jakobhojgaard.com
+# Jakob Højgaard — Personal Site & Blog
 
-Personal website and professional portfolio for Jakob Højgaard.
-
-## Overview
-
-Static personal website built with Hugo featuring:
-- Introduction and professional profile
-- Detailed experience section
-- Articles/blog
-- Contact information for advisory services
-
-## Tech Stack
-
-- **Static Site Generator**: Hugo v0.153.2
-- **Styling**: Vanilla CSS (no frameworks)
-- **Content**: Markdown + YAML front matter
-- **Deployment**: Vercel / Netlify / GitHub Pages
+A minimal, fast personal blog built with [Astro](https://astro.build), MDX, and Tailwind CSS. Deployed to GitHub Pages.
 
 ## Quick Start
 
-### Prerequisites
-
-- Hugo v0.121.0 or later ([installation guide](https://gohugo.io/installation/))
-- Git
-
-### Development
-
 ```bash
-# Clone the repository
-git clone https://github.com/hgaard/jakobhojgaard.com.git
-cd jakobhojgaard.com
-
-# Start development server
-hugo server -D
-
-# Visit http://localhost:1313
+npm install
+npm run dev        # Local dev server at localhost:4321
+npm run build      # Build static site to ./dist
+npm run preview    # Preview the built site locally
 ```
 
-### Build
+## Writing a New Post
 
-```bash
-# Build for production
-hugo --minify
+Create a new `.mdx` file in `src/pages/blog/`:
 
-# Output in public/ directory
+```mdx
+---
+layout: ../../layouts/BlogPost.astro
+title: "Your Post Title"
+excerpt: "A one-sentence summary that appears on the homepage and as the article intro."
+date: "Feb 2026"
+pubDate: "2026-02-15"
+category: "Fintech"
+readTime: "5 min"
+featured: false
+---
+
+Your content here. Full Markdown supported — headings, code blocks, links, images, etc.
 ```
 
-## Content Management
+Set `featured: true` on one post to highlight it on the homepage.
 
-### Update Homepage
+## Deploying to GitHub Pages
 
-Edit `content/_index.md`
+### One-time setup
 
-### Add Experience
+1. Create a new repo on GitHub (e.g. `yourusername.github.io` for a user site, or any name for a project site)
 
-Edit `data/experience.json`
+2. Update `astro.config.mjs`:
+   ```js
+   // For a user site (yourusername.github.io):
+   site: 'https://yourusername.github.io',
 
-### Create New Article
+   // For a project site (yourusername.github.io/repo-name):
+   site: 'https://yourusername.github.io',
+   base: '/repo-name',
+   ```
 
-```bash
-hugo new articles/my-article-title.md
-```
+3. Go to your repo **Settings → Pages → Build and deployment → Source** and select **GitHub Actions**
 
-### Update Contact Info
+4. Push to `main`:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin git@github.com:yourusername/your-repo.git
+   git push -u origin main
+   ```
 
-Edit `content/contact/_index.md`
+The GitHub Actions workflow (`.github/workflows/deploy.yml`) handles the rest — it builds the site and deploys it automatically on every push to `main`.
 
-## Deployment
+### Custom domain (optional)
 
-### Vercel (Recommended)
-
-1. Push to GitHub
-2. Import repository in Vercel
-3. Configure:
-   - Build Command: `hugo --minify`
-   - Output Directory: `public`
-   - Hugo Version: `0.153.2`
-
-### Netlify
-
-Configuration already in `netlify.toml`. Just connect the repository in Netlify dashboard.
-
-### GitHub Pages
-
-GitHub Actions workflow configured in `.github/workflows/deploy.yml`. Enable GitHub Pages in repository settings.
+1. Add a `public/CNAME` file containing your domain (e.g. `jakobhojgaard.com`)
+2. Configure DNS: add a CNAME record pointing to `yourusername.github.io`
+3. In repo **Settings → Pages**, enter your custom domain and enable HTTPS
 
 ## Project Structure
 
 ```
-jakobhojgaard.com/
-├── content/           # Markdown content
-├── data/              # JSON data files
-├── layouts/           # Hugo templates
-├── static/            # Static assets
-├── config.toml        # Hugo configuration
-└── public/            # Generated site (gitignored)
+├── src/
+│   ├── layouts/
+│   │   ├── BaseLayout.astro      # Shell: nav, footer, meta tags
+│   │   └── BlogPost.astro        # Article layout with prose styling
+│   ├── pages/
+│   │   ├── index.astro            # Homepage with article listing
+│   │   ├── about.astro            # About page
+│   │   └── blog/
+│   │       └── *.mdx              # Blog posts (one file per post)
+│   └── styles/
+│       └── global.css             # Tailwind + prose styling + fonts
+├── public/
+│   └── favicon.svg
+├── .github/workflows/
+│   └── deploy.yml                 # GitHub Pages deployment
+├── astro.config.mjs
+├── tailwind.config.mjs
+└── package.json
 ```
 
-## Documentation
+## Customisation
 
-- [Quickstart Guide](specs/001-personal-website/quickstart.md)
-- [Feature Specification](specs/001-personal-website/spec.md)
-- [Implementation Plan](specs/001-personal-website/plan.md)
-- [Data Model](specs/001-personal-website/data-model.md)
-
-## Performance
-
-Built to meet:
-- Lighthouse Performance >90
-- Lighthouse Accessibility >95
-- Lighthouse Best Practices >90
-- Lighthouse SEO >90
-
-## Accessibility
-
-- WCAG 2.1 AA compliant
-- Works without JavaScript
-- Keyboard navigable
-- Screen reader compatible
-
-## License
-
-Copyright © 2025 Jakob Højgaard. All rights reserved.
+- **Social links**: Update URLs in `BaseLayout.astro` footer and `about.astro`
+- **Colours**: Edit CSS variables in `tailwind.config.mjs`
+- **Fonts**: Swap the Google Fonts import in `global.css`
+- **Newsletter**: Wire up the subscribe form to Buttondown, ConvertKit, or your preferred service

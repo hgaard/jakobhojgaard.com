@@ -1,0 +1,38 @@
+---
+layout: ../../layouts/BlogPost.astro
+title: "AWS Fargate vs Lambda: A Real-World Decision Framework"
+excerpt: "The serverless vs containers debate is usually framed as theology. After running both in production for fintech workloads, here's a pragmatic way to choose."
+date: "Jan 2026"
+pubDate: "2026-01-08"
+category: "Architecture"
+readTime: "6 min"
+featured: false
+---
+
+Every architecture discussion about AWS compute eventually becomes a religious debate between Lambda purists and container advocates. Having run both in production for financial services workloads, I've found the answer is boringly pragmatic: it depends on three things.
+
+## The three questions that matter
+
+**1. What's your cold start tolerance?**
+
+If your API needs to respond in under 200ms consistently — say, a real-time pricing endpoint — Lambda's cold starts will hurt you. Yes, provisioned concurrency exists, but at that point you're paying for always-on compute with Lambda's pricing model, which rarely makes sense.
+
+Fargate with a minimum task count gives you predictable latency without the complexity of managing EC2 instances.
+
+**2. How long do your processes run?**
+
+Lambda has a 15-minute execution limit. If you're processing mortgage documents, running credit checks against multiple bureaus, or doing anything that involves waiting on slow third-party APIs with retry logic, you'll hit that ceiling faster than you think.
+
+Fargate has no such limit. A task can run for hours if needed.
+
+**3. What does your team already know?**
+
+This is the one people skip, and it matters most. If your team thinks in containers and has solid Docker knowledge, Fargate will feel natural. If they're coming from a serverless-first background, Lambda's event-driven model will click faster.
+
+Forcing a paradigm shift costs more than the infrastructure savings will ever recover.
+
+## My current default
+
+For new services at this point, I default to Fargate for anything that's a "service" (APIs, background workers, scheduled jobs) and Lambda for event-driven glue (S3 triggers, webhook handlers, lightweight transformations).
+
+The hybrid approach sounds like hedging, but it's worked well in practice. Each tool stays in its strength zone, and the team doesn't have to force every problem into one shape.
