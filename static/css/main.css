@@ -14,8 +14,12 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: #333;
+  /* Academic serif font stack for readability */
+  font-family: Charter, 'Bitstream Charter', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  font-size: 19px;
+  line-height: 1.8;
+  letter-spacing: -0.011em;
+  color: #1a1a1a;
   background-color: #fff;
   max-width: 1200px;
   margin: 0 auto;
@@ -27,10 +31,14 @@ body {
    ============================================================================ */
 
 h1, h2, h3, h4, h5, h6 {
+  /* Sans-serif headers for contrast with serif body */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
   line-height: 1.2;
   font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
 }
 
 h1 { font-size: 2rem; }
@@ -41,18 +49,44 @@ p {
   margin-bottom: 1em;
 }
 
+/* Academic link styling */
 a {
-  color: #0066cc;
+  color: #2c5282;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.2s ease;
 }
 
 a:hover {
-  text-decoration: underline;
+  border-bottom-color: #2c5282;
+  text-decoration: none;
 }
 
 a:focus {
-  outline: 2px solid #0066cc;
+  outline: 2px solid #2c5282;
   outline-offset: 2px;
+}
+
+/* Code styling */
+code {
+  background: #f4f4f4;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: 'Monaco', 'Consolas', 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+pre {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+pre code {
+  background: none;
+  padding: 0;
 }
 
 /* ============================================================================
@@ -75,12 +109,14 @@ nav {
 .site-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #333;
+  color: #1a1a1a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .site-title:hover {
   text-decoration: none;
-  color: #0066cc;
+  color: #2c5282;
+  border-bottom-color: transparent;
 }
 
 .nav-menu {
@@ -93,16 +129,17 @@ nav {
 .nav-menu a {
   color: #666;
   font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .nav-menu a:hover {
-  color: #0066cc;
-  text-decoration: none;
+  color: #2c5282;
+  border-bottom-color: transparent;
 }
 
 .nav-menu a[aria-current="page"] {
-  color: #0066cc;
-  border-bottom: 2px solid #0066cc;
+  color: #2c5282;
+  border-bottom: 2px solid #2c5282;
 }
 
 /* ============================================================================
@@ -112,6 +149,132 @@ nav {
 main {
   padding: 2rem 0;
   min-height: 60vh;
+}
+
+/* ============================================================================
+   Academic Article Styles
+   ============================================================================ */
+
+/* Article content container with narrower academic width */
+article.content {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+/* Enhanced vertical rhythm for article content */
+article.content > * + * {
+  margin-top: 1.5rem;
+}
+
+article.content h2 {
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+article.content h3 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+article.content p {
+  margin-bottom: 1.5rem;
+}
+
+/* Section numbering support */
+.section-number {
+  font-variant-numeric: lining-nums;
+  margin-right: 0.5em;
+}
+
+/* Footnotes styling */
+.footnotes {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.9em;
+  color: #4a4a4a;
+}
+
+.footnote-ref {
+  font-size: 0.75em;
+  vertical-align: super;
+  text-decoration: none;
+  color: #2c5282;
+  padding: 0 0.2em;
+}
+
+.footnote-ref:hover {
+  border-bottom: 1px solid #2c5282;
+}
+
+.footnotes ol {
+  padding-left: 1.5rem;
+}
+
+.footnotes li {
+  margin-bottom: 0.5rem;
+}
+
+/* Figure and caption styling */
+figure {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+figcaption {
+  margin-top: 0.75rem;
+  font-style: italic;
+  font-size: 0.95em;
+  color: #4a4a4a;
+  text-align: center;
+}
+
+/* Table styling */
+table {
+  margin: 2rem auto;
+  border-collapse: collapse;
+  font-size: 0.95em;
+  width: 100%;
+  max-width: 100%;
+}
+
+table th {
+  background: #f8f8f8;
+  border-bottom: 2px solid #ddd;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  text-align: left;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+table td {
+  border-bottom: 1px solid #eee;
+  padding: 0.75rem 1rem;
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Blockquotes */
+blockquote {
+  margin: 2rem 0;
+  padding-left: 1.5rem;
+  border-left: 3px solid #e0e0e0;
+  color: #4a4a4a;
+  font-style: italic;
+}
+
+/* Lists in article content */
+article.content ul,
+article.content ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+article.content li {
+  margin-bottom: 0.5rem;
 }
 
 /* ============================================================================
@@ -132,6 +295,10 @@ footer {
 
 /* Mobile (320px - 767px) */
 @media (max-width: 767px) {
+  body {
+    font-size: 18px;
+  }
+
   nav {
     flex-direction: column;
     align-items: flex-start;
@@ -145,12 +312,33 @@ footer {
 
   h1 { font-size: 1.75rem; }
   h2 { font-size: 1.35rem; }
+
+  article.content {
+    padding: 2rem 1rem;
+  }
+
+  article.content h2 {
+    margin-top: 3rem;
+  }
+
+  table {
+    font-size: 0.85em;
+  }
+
+  table th,
+  table td {
+    padding: 0.5rem;
+  }
 }
 
 /* Tablet (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
   body {
     padding: 0 2rem;
+  }
+
+  article.content {
+    padding: 3rem 1.5rem;
   }
 }
 
@@ -161,10 +349,14 @@ footer {
   }
 }
 
-/* Large screens (2560px+) - max content width already set on body */
+/* Large screens (2560px+) */
 @media (min-width: 2560px) {
-  body {
+  html {
     font-size: 18px;
+  }
+
+  body {
+    font-size: 20px;
   }
 }
 
@@ -177,7 +369,7 @@ footer {
   position: absolute;
   top: -40px;
   left: 0;
-  background: #0066cc;
+  background: #2c5282;
   color: white;
   padding: 8px;
   text-decoration: none;
@@ -190,7 +382,7 @@ footer {
 
 /* Focus styles for keyboard navigation */
 :focus {
-  outline: 2px solid #0066cc;
+  outline: 2px solid #2c5282;
   outline-offset: 2px;
 }
 
