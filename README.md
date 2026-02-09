@@ -1,6 +1,17 @@
 # Jakob Højgaard — Personal Site & Blog
 
-A minimal, fast personal blog built with [Astro](https://astro.build), MDX, and Tailwind CSS. Deployed to GitHub Pages.
+Personal website and blog for Jakob Højgaard, CIO and technology builder. A minimal, fast blog built with [Astro](https://astro.build), MDX, and Tailwind CSS.
+
+🌐 **Live site**: [jakobhojgaard.com](https://jakobhojgaard.com)
+
+## Features
+
+- ⚡️ Built with Astro 5 for optimal performance
+- 📝 MDX support for rich blog content
+- 🎨 Tailwind CSS with custom typography
+- 📱 Fully responsive design
+- ♿️ Accessible and semantic HTML
+- 🚀 Automated deployment via GitHub Actions
 
 ## Quick Start
 
@@ -32,68 +43,64 @@ Your content here. Full Markdown supported — headings, code blocks, links, ima
 
 Set `featured: true` on one post to highlight it on the homepage.
 
-## Deploying to GitHub Pages
+## Deployment
 
-### One-time setup
+This site is configured for automatic deployment to GitHub Pages:
 
-1. Create a new repo on GitHub (e.g. `yourusername.github.io` for a user site, or any name for a project site)
+- **Custom domain**: `jakobhojgaard.com` (configured via `public/CNAME`)
+- **Deployment**: Automatic via GitHub Actions on every push to `main`
+- **Build output**: Static files generated to `./dist`
 
-2. Update `astro.config.mjs`:
-   ```js
-   // For a user site (yourusername.github.io):
-   site: 'https://yourusername.github.io',
-
-   // For a project site (yourusername.github.io/repo-name):
-   site: 'https://yourusername.github.io',
-   base: '/repo-name',
-   ```
-
-3. Go to your repo **Settings → Pages → Build and deployment → Source** and select **GitHub Actions**
-
-4. Push to `main`:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin git@github.com:yourusername/your-repo.git
-   git push -u origin main
-   ```
-
-The GitHub Actions workflow (`.github/workflows/deploy.yml`) handles the rest — it builds the site and deploys it automatically on every push to `main`.
-
-### Custom domain (optional)
-
-1. Add a `public/CNAME` file containing your domain (e.g. `jakobhojgaard.com`)
-2. Configure DNS: add a CNAME record pointing to `yourusername.github.io`
-3. In repo **Settings → Pages**, enter your custom domain and enable HTTPS
+The GitHub Actions workflow (`.github/workflows/deploy.yml`) automatically builds and deploys the site on every push to the `main` branch.
 
 ## Project Structure
 
 ```
+jakobhojgaard.com/
+├── .github/workflows/
+│   └── deploy.yml              # GitHub Actions deployment workflow
+├── public/
+│   ├── CNAME                   # Custom domain configuration
+│   └── favicon.svg             # Site favicon
 ├── src/
 │   ├── layouts/
-│   │   ├── BaseLayout.astro      # Shell: nav, footer, meta tags
-│   │   └── BlogPost.astro        # Article layout with prose styling
+│   │   ├── BaseLayout.astro    # Base layout with nav, footer, meta tags
+│   │   └── BlogPost.astro      # Blog post layout with article styling
 │   ├── pages/
-│   │   ├── index.astro            # Homepage with article listing
-│   │   ├── about.astro            # About page
+│   │   ├── index.astro         # Homepage with article listing
+│   │   ├── about.astro         # About page
 │   │   └── blog/
-│   │       └── *.mdx              # Blog posts (one file per post)
+│   │       └── *.mdx           # Blog posts (MDX files)
 │   └── styles/
-│       └── global.css             # Tailwind + prose styling + fonts
-├── public/
-│   └── favicon.svg
-├── .github/workflows/
-│   └── deploy.yml                 # GitHub Pages deployment
-├── astro.config.mjs
-├── tailwind.config.mjs
-└── package.json
+│       └── global.css          # Global styles, Tailwind config, fonts
+├── astro.config.mjs            # Astro configuration
+├── package.json                # Dependencies and scripts
+├── tailwind.config.mjs         # Tailwind CSS configuration
+└── tsconfig.json               # TypeScript configuration
 ```
 
-## Customisation
+## Customization
 
-- **Social links**: Update URLs in `BaseLayout.astro` footer and `about.astro`
-- **Colours**: Edit CSS variables in `tailwind.config.mjs`
-- **Fonts**: Swap the Google Fonts import in `global.css`
-- **Newsletter**: Wire up the subscribe form to Buttondown, ConvertKit, or your preferred service
+- **Social links**: Currently configured for LinkedIn, GitHub, and X (Twitter)
+  - Update in `src/layouts/BaseLayout.astro` footer
+  - Update in `src/pages/about.astro`
+- **Colors**: Edit color palette in `tailwind.config.mjs`
+  - Current theme uses warm neutrals with amber accents
+- **Fonts**:
+  - Display: Newsreader (serif)
+  - Body: DM Sans (sans-serif)
+  - Mono: JetBrains Mono
+  - Change imports in `src/styles/global.css`
+- **Content**: Add new blog posts as `.mdx` files in `src/pages/blog/`
+
+## Tech Stack
+
+- **Framework**: [Astro 5](https://astro.build)
+- **Styling**: [Tailwind CSS 3](https://tailwindcss.com)
+- **Content**: [MDX](https://mdxjs.com) (Markdown + JSX)
+- **Hosting**: [GitHub Pages](https://pages.github.com)
+- **CI/CD**: GitHub Actions
+
+## License
+
+© 2026 Jakob Højgaard. All rights reserved.
