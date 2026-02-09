@@ -2,71 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+/* Academic serif fonts for scientific paper aesthetic */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 ::selection {
-  background: #FEF3C7;
-  color: #1A1918;
+  background: #E8EDF5;
+  color: #1A1A1A;
 }
 
-/* Prose styling for blog posts */
+/* Prose styling for blog posts - Academic paper aesthetic */
 .prose {
-  font-family: 'DM Sans', -apple-system, sans-serif;
-  font-size: 16px;
-  line-height: 1.85;
-  color: #4A4845;
+  font-family: 'Crimson Pro', Charter, 'Bitstream Charter', Georgia, serif;
+  font-size: 19px;
+  line-height: 1.8;
+  letter-spacing: -0.011em;
+  color: #1a1a1a;
 }
 
 .prose h2 {
-  font-family: 'Newsreader', Georgia, serif;
-  font-size: 26px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 24px;
   font-weight: 600;
-  color: #1A1918;
-  letter-spacing: -0.5px;
-  margin-top: 48px;
-  margin-bottom: 16px;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
 }
 
 .prose h3 {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 20px;
   font-weight: 600;
-  color: #1A1918;
-  margin-top: 36px;
-  margin-bottom: 12px;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 }
 
 .prose p {
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 .prose a {
-  color: #B45309;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  transition: opacity 0.2s;
+  color: #2c5282;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.2s ease;
 }
 
 .prose a:hover {
-  opacity: 0.7;
+  border-bottom-color: #2c5282;
 }
 
 .prose code {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
-  background: #FFFFFF;
-  padding: 2px 6px;
-  border-radius: 4px;
-  border: 1px solid #E8E6E1;
+  font-family: 'JetBrains Mono', 'Monaco', 'Consolas', monospace;
+  font-size: 0.9em;
+  background: #f4f4f4;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  border: none;
 }
 
 .prose pre {
-  background: #1A1918;
-  color: #E8E6E1;
-  padding: 20px 24px;
-  border-radius: 8px;
+  background: #f4f4f4;
+  color: #1a1a1a;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
   overflow-x: auto;
-  margin-bottom: 24px;
+  margin: 1.5rem 0;
+  border: 1px solid #e0e0e0;
 }
 
 .prose pre code {
@@ -74,36 +78,98 @@
   border: none;
   padding: 0;
   color: inherit;
-  font-size: 13px;
+  font-size: 0.9em;
 }
 
 .prose blockquote {
-  border-left: 3px solid #B45309;
-  padding-left: 20px;
-  margin: 32px 0;
+  border-left: 3px solid #e0e0e0;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
   font-style: italic;
-  color: #4A4845;
+  color: #4a4a4a;
 }
 
 .prose ul, .prose ol {
-  padding-left: 24px;
-  margin-bottom: 24px;
+  padding-left: 2rem;
+  margin: 1.5rem 0;
 }
 
 .prose li {
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .prose img {
-  border-radius: 8px;
-  margin: 32px 0;
+  border-radius: 4px;
+  margin: 3rem auto;
+  display: block;
 }
 
 .prose hr {
   border: none;
   height: 1px;
-  background: #E8E6E1;
-  margin: 48px 0;
+  background: #e0e0e0;
+  margin: 4rem 0;
+}
+
+/* Academic table styling */
+.prose table {
+  margin: 2rem auto;
+  border-collapse: collapse;
+  font-size: 0.95em;
+  width: 100%;
+}
+
+.prose table th {
+  background: #f8f8f8;
+  border-bottom: 2px solid #ddd;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  text-align: left;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.prose table td {
+  border-bottom: 1px solid #eee;
+  padding: 0.75rem 1rem;
+}
+
+.prose table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Footnotes styling */
+.prose .footnotes {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.9em;
+  color: #4a4a4a;
+}
+
+.prose .footnote-ref {
+  font-size: 0.75em;
+  vertical-align: super;
+  text-decoration: none;
+  color: #2c5282;
+  padding: 0 0.2em;
+}
+
+.prose .footnote-ref:hover {
+  border-bottom: 1px solid #2c5282;
+}
+
+/* Figure captions */
+.prose figure {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.prose figcaption {
+  margin-top: 0.75rem;
+  font-style: italic;
+  font-size: 0.95em;
+  color: #4a4a4a;
+  text-align: center;
 }
 
 @keyframes fadeInUp {
