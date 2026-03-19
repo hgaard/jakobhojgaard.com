@@ -1,0 +1,111 @@
+---
+const title = "First Home Buyer Research — Jakob Højgaard";
+const description = "Share your first home buying experience. Independent research by Jakob Højgaard.";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="bg-bg min-h-screen font-body">
+    <!-- Subtle grain overlay -->
+    <div class="fixed inset-0 pointer-events-none z-0 opacity-[0.025]"
+      style="background-image: url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E&quot;); background-repeat: repeat; background-size: 256px 256px;">
+    </div>
+
+    <div class="max-w-[760px] mx-auto px-6 relative z-10">
+      <div class="animate-fade-in py-10">
+        <!-- Hero -->
+        <div class="mb-6">
+          <p class="font-body text-sm text-accent tracking-[2px] uppercase mb-3 font-medium">Research</p>
+          <h1 class="font-display text-3xl md:text-[42px] font-semibold text-text-primary leading-[1.1] tracking-tight mb-3">
+            Bought your first home recently? Thinking about it?
+          </h1>
+          <p class="font-body text-base text-text-secondary">
+            I'd love to hear about your experience — the good, the confusing, and everything in between.
+          </p>
+        </div>
+
+        <!-- Intro text -->
+        <div class="prose max-w-[640px]" style="font-size: 15px; line-height: 1.7;">
+          <p>
+            I'm Jakob, and I'm doing independent research into the first home buyer experience in Australia.
+            I'm chatting to people who are currently looking to buy, seriously considering it, or have bought
+            their first place in the last year or two.
+          </p>
+          <p>
+            I want to understand what kicked off your journey, how you went about it — whether through a broker,
+            direct to a bank, or a mix of both — what went well, and what felt especially hard or daunting.
+            Things like navigating government schemes (FHBG, Help to Buy, state grants) and just generally
+            how supported you felt along the way.
+          </p>
+          <p class="!mb-0">
+            This is genuine research — no sales pitch, no hidden agenda.
+          </p>
+        </div>
+
+        <div class="h-px bg-border my-8"></div>
+
+        <!-- What to expect -->
+        <div class="mb-8">
+          <h3 class="font-display text-lg font-semibold text-text-primary mb-4">What to expect</h3>
+          <div class="flex flex-wrap gap-3">
+            <div class="bg-white/60 rounded-xl px-4 py-3 flex items-center gap-3">
+              <span class="text-xl">💬</span>
+              <div>
+                <div class="font-body text-sm font-semibold text-text-primary">30–45 min chat</div>
+                <div class="font-body text-xs text-text-muted">Casual conversation</div>
+              </div>
+            </div>
+            <div class="bg-white/60 rounded-xl px-4 py-3 flex items-center gap-3">
+              <span class="text-xl">📋</span>
+              <div>
+                <div class="font-body text-sm font-semibold text-text-primary">No prep needed</div>
+                <div class="font-body text-xs text-text-muted">Just your experience</div>
+              </div>
+            </div>
+            <div class="bg-white/60 rounded-xl px-4 py-3 flex items-center gap-3">
+              <span class="text-xl">🎁</span>
+              <div>
+                <div class="font-body text-sm font-semibold text-text-primary">$30 gift card</div>
+                <div class="font-body text-xs text-text-muted">Visa, as a thank you</div>
+              </div>
+            </div>
+            <div class="bg-white/60 rounded-xl px-4 py-3 flex items-center gap-3">
+              <span class="text-xl">🔒</span>
+              <div>
+                <div class="font-body text-sm font-semibold text-text-primary">Confidential</div>
+                <div class="font-body text-xs text-text-muted">Your info stays private</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book a time CTA -->
+        <div class="border border-border rounded-xl p-6 text-center">
+          <h2 class="font-display text-xl font-semibold text-text-primary mb-2">Interested?</h2>
+          <p class="font-body text-sm text-text-secondary mb-5">
+            Pick a time that works for you — no preparation needed, just bring your experience.
+          </p>
+          <a href="https://calendar.app.google/nPW8Eczo9sjkXn739" target="_blank"
+            class="inline-flex items-center gap-2 px-8 py-4 bg-text-primary text-bg font-body font-semibold text-base rounded-lg no-underline hover:opacity-90 transition-opacity">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Book a time to chat
+          </a>
+          <p class="font-body text-xs text-text-muted mt-3">
+            Your details are only used to arrange the chat. Nothing shared, nothing sold.
+          </p>
+        </div>
+
+        <p class="font-mono text-xs text-text-muted text-center mt-8">
+          Independent research by Jakob Højgaard
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
