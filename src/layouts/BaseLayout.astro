@@ -1,5 +1,6 @@
 ---
 import Analytics from '@vercel/analytics/astro'
+import SpeedInsights from "@vercel/speed-insights/astro"
 interface Props {
   title?: string;
   description?: string;
@@ -16,6 +17,7 @@ const { title = "Jakob Højgaard", description = "CIO, builder, writer. Thoughts
     <meta name="description" content={description} />
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <SpeedInsights /> 
     <Analytics />
   </head>
   <body class="bg-bg min-h-screen font-body">
