@@ -10,8 +10,8 @@ const articles = (await getCollection('articles', ({ data }) => !data.draft))
   <div class="animate-fade-in">
     <div class="py-14">
       <h1 class="font-display text-4xl font-semibold text-text-primary tracking-tight mb-4">Articles</h1>
-      <p class="font-body text-text-secondary max-w-[480px]">
-        Thoughts on fintech, engineering, leadership, and building things that matter.
+      <p class="font-body text-text-secondary max-w-[712px]">
+        Notes from 25 years in tech and one brand-new startup. Mostly about what AI actually changes (less than the hype says, more than the sceptics admit), building a company with agents, and the fintech I'm building to get first home buyers over the line.
       </p>
     </div>
 
@@ -31,9 +31,11 @@ const articles = (await getCollection('articles', ({ data }) => !data.draft))
             <h2 class="font-display text-xl font-semibold text-text-primary tracking-tight group-hover:text-accent transition-colors">
               {article.data.title}
             </h2>
-            <p class="font-body text-sm text-text-secondary mt-1.5 leading-relaxed max-w-[560px]">
-              {article.data.excerpt}
-            </p>
+            {article.data.excerpt && (
+              <p class="font-body text-sm text-text-secondary mt-1.5 leading-relaxed max-w-[560px]">
+                {article.data.excerpt}
+              </p>
+            )}
           </a>
         ))}
       </div>

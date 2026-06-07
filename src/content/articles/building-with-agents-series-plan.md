@@ -3,17 +3,18 @@ title: "Building with Agents — Series Plan"
 excerpt: "Planning document for a recurring personal series on building a business with AI agent employees."
 date: "Mar 2026"
 pubDate: "2026-03-30"
-category: "AI"
-readTime: "10 min"
+category: "Series"
+readTime: "6 min"
 featured: false
 draft: true
+tags: ["ai", "agents", "building-in-public", "series"]
 ---
 
-<!--
+<!-- 
   SERIES PLANNING DOCUMENT
   This is a draft/planning post — not intended for publication as-is.
   Use it to capture your thoughts, then we'll turn each section into a standalone post.
-
+  
   The blue "YOUR TURN" prompts are questions for you to fill in.
   Delete them (or turn them into real content) as you go.
 -->
@@ -153,7 +154,30 @@ Setting up agents for everyday admin. Email triage, scheduling, document prep, d
 
 ---
 
-### Post 5+: Recurring Updates & New Territory
+### Post 5: Avoid the Microservice Fallacy (Redux)
+
+A callback to your 2017 talk ["Avoid the Micro Service Fallacy"](https://www.youtube.com/watch?v=vtGP3YVFO70) — revisited through the lens of AI-assisted development. The core argument aged well: it's tempting to decompose early into microservices, but the overhead compounds fast. With agents in the picture, the case for a disciplined monorepo is even stronger — agents need context, and scattered services destroy context.
+
+**What to cover:**
+
+- The original argument from the talk and why it still holds
+- Why AI agents in particular suffer from microservice sprawl — fragmented context, more coordination overhead, harder for the agent to reason across boundaries
+- The monorepo discipline: how you structure code so agents can see and understand enough to be productive
+- The important distinction between repo structure and deployment model — you can deploy as multiple services while developing in a monorepo
+- Practical examples of where a monorepo approach has made agent-assisted development faster or more reliable
+
+**Key considerations:**
+
+- The "I made this argument a decade ago" framing gives you unusual credibility — you're not just reacting to the AI moment, you had a principled view that turned out to be even more relevant than you expected
+- Be specific about what "context" means for an agent — file boundaries, import graphs, shared types, etc. This is where the post goes from opinion to insight
+- Acknowledge that there are genuine cases for service boundaries — the post is stronger if it's nuanced rather than absolutist
+- This post bridges your technical past and your AI-native present, which reinforces the series narrative
+
+> **YOUR TURN:** What's the strongest example you have of monorepo structure helping agent productivity? Have you hit cases where you *did* need service boundaries, and how did you handle that? How much of the original talk's argument would you update vs. keep as-is?
+
+---
+
+### Post 6+: Recurring Updates & New Territory
 
 From here, the series becomes a living document. You can revisit any earlier thread with a "three months later" update, or introduce entirely new topics as your usage evolves.
 
