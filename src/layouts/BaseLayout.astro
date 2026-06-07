@@ -1,4 +1,5 @@
 ---
+import '../styles/global.css';
 import Analytics from '@vercel/analytics/astro'
 import SpeedInsights from "@vercel/speed-insights/astro"
 interface Props {
@@ -6,7 +7,7 @@ interface Props {
   description?: string;
 }
 
-const { title = "Jakob Højgaard", description = "CIO, builder, writer. Thoughts on fintech, engineering, and leadership." } = Astro.props;
+const { title = "Jakob Højgaard", description = "Founder, builder, writer. Thoughts on fintech, engineering, and leadership." } = Astro.props;
 ---
 
 <!doctype html>
@@ -32,6 +33,10 @@ const { title = "Jakob Højgaard", description = "CIO, builder, writer. Thoughts
         <a href="/" class="flex items-baseline gap-2.5 no-underline">
           <span class="font-display text-[22px] font-semibold text-text-primary tracking-tight">Jakob Højgaard</span>
         </a>
+        <div class="flex gap-6">
+          <a href="/articles" class="font-mono text-xs text-text-muted no-underline hover:text-accent transition-colors">Articles</a>
+          <a href="/about" class="font-mono text-xs text-text-muted no-underline hover:text-accent transition-colors">About</a>
+        </div>
       </nav>
 
       <!-- Content -->
