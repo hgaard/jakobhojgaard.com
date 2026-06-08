@@ -4,7 +4,7 @@ title: "AI's Practical Value Beyond the Hype"
 pubDate: "2026-06-09"
 date: "Jun 2026"
 category: "Opinion"
-readTime: "8 min"
+readTime: "11 min"
 featured: true
 draft: false
 tags: ["ai", "productivity", "agents", "opinion"]
