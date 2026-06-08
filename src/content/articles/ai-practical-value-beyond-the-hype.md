@@ -5,11 +5,9 @@ pubDate: "2026-06-09"
 date: "Jun 2026"
 category: "Opinion"
 readTime: "8 min"
-featured: false
-draft: true
+featured: true
+draft: false
 tags: ["ai", "productivity", "agents", "opinion"]
-heroImage: "../../assets/articles/2_bell_curve.png"
-heroImageAlt: "20-60-20 bell curve"
 ---
 
 ## The 20/60/20 Problem
