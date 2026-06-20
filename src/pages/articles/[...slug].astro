@@ -15,7 +15,13 @@ const { article } = Astro.props;
 const { Content } = await render(article);
 ---
 
-<BaseLayout title={`${article.data.title} — Jakob Højgaard`} description={article.data.excerpt ?? article.data.title}>
+<BaseLayout
+  title={`${article.data.title} — Jakob Højgaard`}
+  description={article.data.excerpt ?? article.data.title}
+  type="article"
+  publishedTime={article.data.pubDate}
+  image={article.data.heroImage?.src}
+>
   <article class="animate-fade-in">
     <a href="/articles" class="inline-flex items-center gap-1.5 font-body text-sm text-text-muted no-underline pt-10 pb-5 hover:text-accent transition-colors">
       ← Back to all articles

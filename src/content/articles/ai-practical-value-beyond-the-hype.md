@@ -1,6 +1,6 @@
 ---
 title: "AI's Practical Value Beyond the Hype"
-
+excerpt: "The AI conversation is dominated by the extremes — imminent AGI or pure bubble. After 25 years in tech and six months building with these tools daily, here's the more useful question: what the 60% in the middle can actually do with them right now."
 pubDate: "2026-06-09"
 date: "Jun 2026"
 category: "Opinion"
