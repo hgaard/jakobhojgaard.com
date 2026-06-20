@@ -11,7 +11,7 @@ Personal website and blog for Jakob Højgaard, CIO and technology builder. A min
 - 🎨 Tailwind CSS with custom typography
 - 📱 Fully responsive design
 - ♿️ Accessible and semantic HTML
-- 🚀 Automated deployment via GitHub Actions
+- 🚀 Automatic deployment via Vercel
 
 ## Quick Start
 
@@ -45,23 +45,20 @@ Set `featured: true` on one post to highlight it on the homepage.
 
 ## Deployment
 
-This site is configured for automatic deployment to GitHub Pages:
+This site deploys automatically to [Vercel](https://vercel.com):
 
-- **Custom domain**: `jakobhojgaard.com` (configured via `public/CNAME`)
-- **Deployment**: Automatic via GitHub Actions on every push to `main`
+- **Custom domain**: `jakobhojgaard.com` (managed in the Vercel project's domain settings; the apex is primary and `www` redirects to it)
+- **Deployment**: Automatic on every push to `main` via Vercel's Git integration
 - **Build output**: Static files generated to `./dist`
-
-The GitHub Actions workflow (`.github/workflows/deploy.yml`) automatically builds and deploys the site on every push to the `main` branch.
 
 ## Project Structure
 
 ```
 jakobhojgaard.com/
-├── .github/workflows/
-│   └── deploy.yml              # GitHub Actions deployment workflow
 ├── public/
-│   ├── CNAME                   # Custom domain configuration
-│   └── favicon.svg             # Site favicon
+│   ├── favicon.svg             # Site favicon
+│   ├── og-default.png          # Default social share image
+│   └── robots.txt              # Crawler directives + sitemap pointer
 ├── src/
 │   ├── layouts/
 │   │   ├── BaseLayout.astro    # Base layout with nav, footer, meta tags
@@ -98,8 +95,8 @@ jakobhojgaard.com/
 - **Framework**: [Astro 5](https://astro.build)
 - **Styling**: [Tailwind CSS 3](https://tailwindcss.com)
 - **Content**: [MDX](https://mdxjs.com) (Markdown + JSX)
-- **Hosting**: [GitHub Pages](https://pages.github.com)
-- **CI/CD**: GitHub Actions
+- **Hosting**: [Vercel](https://vercel.com)
+- **CI/CD**: Vercel Git integration
 
 ## License
 
