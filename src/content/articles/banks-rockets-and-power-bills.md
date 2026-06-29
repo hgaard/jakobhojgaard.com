@@ -26,7 +26,7 @@ Take banking. Revolut launched in 2015 with a few engineers and one app, and fro
 
 Closer to home, the same thing is happening to electricity. Amber sells power by passing the live wholesale price straight through to you in an app, for a flat monthly fee. The big retailers buy the same power and resell it as fixed "plans" with a markup, on systems built for a world that didn't change by the half-hour. The product is the software.
 
-The same split turns up almost anywhere: Lemonade and Oscar against the established insurers, SpaceX and Rocket Lab building, flying and rebuilding rockets at a cadence ULA, Boeing and Arianespace can't touch. Even John Deere, one of the few old-school giants to genuinely pull off the pivot to software and data.
+The same split turns up almost anywhere: Lemonade and Oscar against the established insurers in the US, SpaceX and Rocket Lab building, flying and rebuilding rockets at a cadence ULA, Boeing and Arianespace can't touch. Even John Deere, one of the few old-school giants to genuinely pull off the pivot to software and data.
 
 The common thing here isn't "they use technology better." It's structural: for the new entrants, software isn't a department or a cost centre, it's their DNA. They were forced into a clean architecture by the constraint that forces every startup into its best decisions. No money, no spare people, so you build one coherent thing because you can't afford anything else.
 
