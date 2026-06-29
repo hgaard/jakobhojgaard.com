@@ -81,11 +81,11 @@ And if you're in that 60% in the middle — knowing there's more here but unsure
 - Writer's 2026 Enterprise AI Adoption Survey — [writer.com](https://writer.com/blog/enterprise-ai-adoption-2026/) (April 2026)
 - Steve Yegge's Google AI adoption thread — [X post](https://x.com/Steve_Yegge/status/2043747998740689171) (April 2026)
 - Steve Yegge interview with Gergely Orosz on AI agents — [The Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/steve-yegge-on-ai-agents-and-the) (February 2026)
-- Geoffrey Huntley — [Latent Patterns](https://latentpatterns.ai/) <!-- JAKOB: check URL -->
+- Geoffrey Huntley — [Latent Patterns](https://latentpatterns.ai/)
 - Geoff Huntley, AI Engineer Melbourne talk — the rope-bridge / chasm slide is around 53:12 — [YouTube](https://www.youtube.com/watch?v=wjXowoQ7E8c)
 - Andrej Karpathy joins Anthropic's pretraining team — [TechCrunch](https://techcrunch.com/2026/05/19/openai-co-founder-andrej-karpathy-joins-anthropics-pre-training-team/) (May 2026)
 - Andrej Karpathy on jaggedness and on shifting from code generation to knowledge bases — [X post](https://x.com/karpathy/status/2042334451611693415) (April 2026)
-- Boris Cherny's 259 PRs with Claude Code — [X post](https://x.com/AKBorischerny) <!-- JAKOB: find the exact tweet -->
+- Boris Cherny's 259 PRs with Claude Code — [X post](https://x.com/AKBorischerny) 
 - Mitchell Hashimoto on harness engineering — [Faros AI summary](https://www.faros.ai/blog/harness-engineering)
 - OpenAI, "Harness Engineering: Leveraging Codex in an Agent-First World" — [openai.com](https://openai.com/index/harness-engineering/) (February 2026)
 - Tyng et al., "The Influences of Emotion on Learning and Memory" — [Frontiers in Psychology, 2017](https://pmc.ncbi.nlm.nih.gov/articles/PMC5573739/)
